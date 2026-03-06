@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:section_a/home_page.dart';
 
 void main(){
   runApp(MyApp());//runApp() is a function that takes a widget and makes it the root of the widget tree. It also initializes the Flutter framework and starts the app.
@@ -8,7 +9,9 @@ class MyApp extends StatelessWidget {//StatelessWidget is a widget that does not
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();//MaterialApp is a widget that wraps a number of widgets that are commonly required for material design applications. It is used to set up the app's theme, routes, and other properties.
-    
-  }
+    return MaterialApp(//MaterialApp is a widget that wraps a number of widgets that are commonly required for material design applications. It is used to set up the app's theme, routes, and other properties.
+    debugShowCheckedModeBanner: false,
+      home: HomePage(),//home is a property of MaterialApp that takes a widget and makes it the default route of the app. It is used to show the home page of the app.
+    );
+  } 
 }
